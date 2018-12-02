@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/kobe/.android/build-cache/43e0c4735102c7266ec621b5b8c8d1d8aee16cdc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="66fd9d179eb79b64c99e555dead32e725792217a">
+        <dex dex="/Users/kobe/Work/Anxintao/app/build/intermediates/pre-dexed/debug/classes_5f4618ba1dce8d9fa893b5372527797d5610f572.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/kobe/.android/build-cache/d717707f6e1eedfd6e2e42025a1caad53cbf45ae/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/kobe/Work/Anxintao/app/build/intermediates/pre-dexed/debug/classes_d5b4ee2b8a9745d2be6753cfc1c501b2e25acf4f.jar" />
+    </item>
+
+</items>
