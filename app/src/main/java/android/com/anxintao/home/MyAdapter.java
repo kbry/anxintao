@@ -18,20 +18,31 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
   private List<String> list;
 
+  private OnItemClickListener mOnItemClickListener;
   public MyAdapter(List<String> list) {
     this.list = list;
+  }
+
+  public void setOnViewItemClickListener(OnItemClickListener onItemClickListener){
+    this.mOnItemClickListener = onItemClickListener;
   }
 
   @Override
   public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_listivew_item, parent, false);
     MyAdapter.ViewHolder viewHolder = new MyAdapter.ViewHolder(view);
+    viewHolder.mItemView.setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        mOnItemClickListener.onItemClick(v,(int)v.getTag());
+      }
+    });
     return viewHolder;
   }
 
   @Override
   public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
     holder.mText.setText(list.get(position));
+    holder.mItemView.setTag(position);
   }
 
   @Override
@@ -41,9 +52,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
   class ViewHolder extends RecyclerView.ViewHolder {
     TextView mText;
+    View mItemView;
     ViewHolder(View itemView) {
       super(itemView);
+      mItemView = itemView;
       mText = itemView.findViewById(R.id.tv_type);
     }
+  }
+
+  public static interface OnItemClickListener {
+    void onItemClick(View view,int position);
   }
 }

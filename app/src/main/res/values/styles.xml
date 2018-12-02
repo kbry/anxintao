@@ -7,5 +7,11 @@
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
   </style>
-
+  <style name="myRatingBar">
+    <item name="android:progressDrawable">@drawable/icon_sc</item>
+    <item name="android:minHeight">20dip</item>
+    <item name="android:maxHeight">20dip</item>
+    <item name="android:thumb">@null</item>
+    <item name="android:isIndicator">true</item>
+  </style>
 </resources>
