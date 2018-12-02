@@ -48,6 +48,7 @@
     android:layout_height="match_parent">
 
     <TextView
+      android:id="@+id/tv_add_to_cart"
       android:layout_width="0dp"
       android:layout_weight="1"
       android:text="加入购物车"

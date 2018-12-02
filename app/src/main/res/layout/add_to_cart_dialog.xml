@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="400dp"
+  android:background="@android:color/white">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@android:color/white">
+
+      <ImageView
+        android:id="@+id/iv_good_oval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_launcher" />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_good_oval"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/iv_good_oval"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格：" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$26.9" />
+        </LinearLayout>
+
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已选：" />
+
+          <TextView
+            android:id="@+id/tv_choose_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1个"
+            android:visibility="gone" />
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@android:drawable/ic_menu_close_clear_cancel" />
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="80dp">
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@android:color/darker_gray" />
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray" />
+
+      <TextView
+        android:id="@+id/tv_type_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="果径" />
+
+      <TextView
+        android:id="@+id/tv_type_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_type_title"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/text_rectangle"
+        android:padding="8dp"
+        android:text="中果" />
+    </RelativeLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tv_num_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数量" />
+
+      <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/text_rectangle"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+          android:id="@+id/tv_reduce"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="-" />
+
+        <View
+          android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:background="@android:color/darker_gray" />
+
+        <TextView
+          android:id="@+id/tv_count"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="1" />
+
+        <View
+          android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:background="@android:color/darker_gray" />
+
+        <TextView
+          android:id="@+id/tv_add"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="+" />
+
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:background="#ff5500"
+    android:gravity="center"
+    android:text="加入购物车"
+    android:textColor="@android:color/white" />
+</RelativeLayout>

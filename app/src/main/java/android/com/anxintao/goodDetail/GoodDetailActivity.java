@@ -23,6 +23,7 @@ public class GoodDetailActivity extends Activity {
     setContentView(R.layout.activity_good_detail);
     initBannerView();
     initPicListView();
+    initBottomBar();
   }
 
   private void initBannerView() {
@@ -43,7 +44,7 @@ public class GoodDetailActivity extends Activity {
     mBannerView.startLoop(true);
   }
 
-  private void initPicListView(){
+  private void initPicListView() {
     LinearLayout picListContainer = findViewById(R.id.ll_img_container);
     //ImageView imageView = findViewById(R.id.iv_pic);
     //Picasso.with(AnxintaoApplication.getInstance()).load("http://img.hb.aicdn.com/5b591216952133a8b45b8fcba09c7f9f8c4731927531-Tj1dsT_fw658").into(imageView);
@@ -54,20 +55,29 @@ public class GoodDetailActivity extends Activity {
     //        <!--android:layout_width="match_parent"-->
     //        <!--android:layout_height="wrap_content"/>
 
-    for (int i = 0; i <5 ; i++) {
+    for (int i = 0; i < 5; i++) {
       ImageView imageView = new ImageView(this);
       imageView.setScaleType(ImageView.ScaleType.FIT_XY);
       imageView.setAdjustViewBounds(true);
       imageView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
           ViewGroup.LayoutParams.WRAP_CONTENT));
-      Picasso.with(AnxintaoApplication.getInstance()).load("http://img.hb.aicdn.com/5b591216952133a8b45b8fcba09c7f9f8c4731927531-Tj1dsT_fw658").into(imageView);
+      Picasso.with(AnxintaoApplication.getInstance())
+          .load("http://img.hb.aicdn.com/5b591216952133a8b45b8fcba09c7f9f8c4731927531-Tj1dsT_fw658")
+          .into(imageView);
       picListContainer.addView(imageView);
     }
-
-
-
-
   }
+
+    private void initBottomBar(){
+      findViewById(R.id.tv_add_to_cart).setOnClickListener(new View.OnClickListener() {
+        @Override public void onClick(View v) {
+          DialogFromBottom dialog = new DialogFromBottom(GoodDetailActivity.this);
+          dialog.show();
+        }
+      });
+  }
+
+
 
 
 
