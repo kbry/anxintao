@@ -1,4 +1,4 @@
-package android.com.anxintao.home;
+package android.com.anxintao.cart;
 
 import android.com.anxintao.R;
 import android.com.anxintao.widget.OnItemClickListener;
@@ -15,12 +15,12 @@ import java.util.List;
  * 描述:
  */
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
+public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>{
 
   private List<String> list;
 
   private OnItemClickListener mOnItemClickListener;
-  public MyAdapter(List<String> list) {
+  public CartAdapter(List<String> list) {
     this.list = list;
   }
 
@@ -29,9 +29,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
   }
 
   @Override
-  public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_listivew_item, parent, false);
-    MyAdapter.ViewHolder viewHolder = new MyAdapter.ViewHolder(view);
+  public CartAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_listview_item, parent, false);
+    CartAdapter.ViewHolder viewHolder = new CartAdapter.ViewHolder(view);
     viewHolder.mItemView.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
         mOnItemClickListener.onItemClick(v,(int)v.getTag());
@@ -41,7 +41,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
   }
 
   @Override
-  public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
+  public void onBindViewHolder(CartAdapter.ViewHolder holder, int position) {
     holder.mText.setText(list.get(position));
     holder.mItemView.setTag(position);
   }

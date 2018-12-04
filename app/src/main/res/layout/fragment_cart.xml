@@ -1,13 +1,113 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:background="@android:color/white"
+  android:orientation="vertical"
   tools:context="android.com.anxintao.cart.CartFragment">
 
-  <!-- TODO: Update blank fragment layout -->
   <TextView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="@string/hello_blank_fragment" />
+    android:layout_height="38dp"
+    android:gravity="center"
+    android:text="购物车"
+    android:textColor="@android:color/black" />
 
-</FrameLayout>
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/darker_gray" />
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical">
+
+    <TextView
+      android:id="@+id/tv_tip"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="12dp"
+      android:background="@drawable/text_orange_rectangle"
+      android:gravity="center"
+      android:text="提醒"
+      android:textColor="@android:color/white" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="5dp"
+      android:layout_toRightOf="@+id/tv_tip"
+      android:gravity="center_vertical"
+      android:text="店主在结算时直接抵扣佣金"
+      android:textColor="@android:color/darker_gray" />
+
+    <TextView
+      android:id="@+id/tv_handle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="12dp"
+      android:background="@drawable/text_gray_rectangle"
+      android:textColor="@android:color/black"
+      android:gravity="center"
+      android:text="管理" />
+  </RelativeLayout>
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/rv_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    android:layout_weight="1" />
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_gravity="bottom"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:gravity="center_vertical"
+      android:layout_weight="2">
+
+      <RadioButton
+        android:id="@+id/rb_choose"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="3dp"
+        android:text="已选 (0)"
+        android:textColor="@android:color/darker_gray" />
+
+      <TextView
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="$ 424.90"/>
+
+    </LinearLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@android:color/holo_red_dark"
+      android:gravity="center"
+      android:text="删除所选"
+      android:textColor="@android:color/white" />
+
+  </LinearLayout>
+</LinearLayout>

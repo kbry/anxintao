@@ -3,6 +3,7 @@ package android.com.anxintao.home;
 import android.com.anxintao.R;
 import android.com.anxintao.goodDetail.GoodDetailActivity;
 import android.com.anxintao.tools.ToastUtil;
+import android.com.anxintao.widget.OnItemClickListener;
 import android.com.anxintao.widget.RationItemView;
 import android.content.Intent;
 import android.os.Bundle;
@@ -144,7 +145,7 @@ public class HomeFragment extends Fragment  {
       test.add(i+"test");
     }
     MyAdapter adapter = new MyAdapter(test);
-    adapter.setOnViewItemClickListener(new MyAdapter.OnItemClickListener() {
+    adapter.setOnViewItemClickListener(new OnItemClickListener() {
       @Override public void onItemClick(View view, int position) {
         ToastUtil.toast("---"+position);
         Intent intent = new Intent(HomeFragment.this.getContext(), GoodDetailActivity.class);
