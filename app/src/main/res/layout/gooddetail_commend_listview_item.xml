@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:hedgehog="http://schemas.android.com/tools"
+  android:gravity="center_vertical"
+  android:layout_marginLeft="15dp"
+  android:layout_marginRight="15dp"
+  android:background="@android:color/white"
+  android:orientation="vertical">
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#f5f5f5"/>
+
+<RelativeLayout
+  android:layout_width="match_parent"
+  android:layout_marginTop="8dp"
+  android:layout_height="wrap_content">
+
+  <ImageView
+    android:id="@+id/avatar"
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+    android:layout_centerVertical="true"
+    android:background="@drawable/ic_launcher"/>
+
+  <TextView
+    android:id="@+id/nick"
+    android:layout_centerVertical="true"
+    android:layout_toRightOf="@+id/avatar"
+    android:layout_marginLeft="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="1****0" />
+
+  <com.hedgehog.ratingbar.RatingBar
+    android:id="@+id/ratingbar"
+    android:layout_centerVertical="true"
+    android:layout_toRightOf="@+id/nick"
+    android:layout_marginLeft="15dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    hedgehog:clickable="true"
+    hedgehog:halfstart="false"
+    hedgehog:starCount="5"
+    hedgehog:starEmpty="@drawable/start_gray_empty"
+    hedgehog:starFill="@mipmap/start_red_full"
+    hedgehog:starHalf="@mipmap/start_gray_empty"
+    hedgehog:starImageHeight="10dp"
+    hedgehog:starImagePadding="3dp"
+    hedgehog:starImageWidth="10dp" />
+
+  <TextView
+    android:id="@+id/date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:textSize="13dp"
+    android:layout_alignParentRight="true"
+    android:textColor="#999999"
+    android:text="2018-11-20" />
+
+  </RelativeLayout>
+
+  <TextView
+    android:id="@+id/tv_type"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="8dp"
+    android:textSize="13dp"
+    android:textColor="#444444"
+    android:text="好吃到不行好用到不行超级超级超级好用，草莓味的简直无敌了，香蕉味的也很好吃哦" />
+
+
+</LinearLayout>

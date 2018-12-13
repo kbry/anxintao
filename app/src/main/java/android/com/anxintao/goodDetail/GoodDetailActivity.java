@@ -4,7 +4,11 @@ import android.app.Activity;
 import android.com.anxintao.AnxintaoApplication;
 import android.com.anxintao.R;
 import android.com.anxintao.tools.ToastUtil;
+import android.com.anxintao.widget.OnItemClickListener;
+import android.com.anxintao.widget.RecycleViewDivider;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -24,6 +28,31 @@ public class GoodDetailActivity extends Activity {
     initBannerView();
     initPicListView();
     initBottomBar();
+    initCommendList();
+  }
+
+  private void initCommendList(){
+    RecyclerView commendList = (RecyclerView)findViewById(R.id.lv_commend);
+    LinearLayoutManager
+        layout = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+    layout.setSmoothScrollbarEnabled(true);
+    layout.setAutoMeasureEnabled(true);
+    commendList.setLayoutManager(layout);
+    commendList.addItemDecoration(new RecycleViewDivider(this,LinearLayoutManager.HORIZONTAL,0,getResources().getColor(android.R.color.transparent)));
+    List<String> test = new ArrayList<>();
+    for (int i = 0; i < 10; i++) {
+      test.add(i+"test");
+    }
+    CommendAdapter adapter = new CommendAdapter(test);
+    adapter.setOnViewItemClickListener(new OnItemClickListener() {
+      @Override public void onItemClick(View view, int position) {
+        ToastUtil.toast("---"+position);
+        //Intent intent = new Intent(CartFragment.this.getContext(), GoodDetailActivity.class);
+        //intent.putExtra("goodid",position);
+        //startActivity(intent);
+      }
+    });
+    commendList.setAdapter(adapter);
   }
 
   private void initBannerView() {
