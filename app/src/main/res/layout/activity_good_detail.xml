@@ -17,7 +17,7 @@
       android:orientation="vertical">
 
 
-      <com.oragee.banners.BannerView
+      <android.com.anxintao.widget.banner.BannerView
         android:id="@+id/bannerview"
         android:layout_width="match_parent"
         tools:visibility="gone"
