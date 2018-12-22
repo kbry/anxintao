@@ -1,44 +1,90 @@
-<android.com.anxintao.widget.ScrollviewNestedRecyclerview xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:fillViewport="true">
+  android:layout_height="match_parent">
 
-  <LinearLayout
+  <RelativeLayout
+    android:id="@+id/rl_title"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:descendantFocusability="blocksDescendants"
-    android:orientation="vertical">
+    android:layout_height="44dp">
 
-    <include layout="@layout/home_top_header" />
-
-    <LinearLayout
+    <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:background="@color/cardview_light_background"
-      android:orientation="horizontal">
+      android:layout_centerInParent="true"
+      android:text="爱真选"
+      android:textColor="#333333"
+      android:textSize="18dp" />
 
-      <ImageView
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:layout_marginRight="15dp"
+      android:src="@drawable/search" />
+  </RelativeLayout>
+
+
+  <android.com.anxintao.widget.ScrollviewNestedRecyclerview
+    android:id="@+id/snrv"
+    android:layout_below="@+id/rl_title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:descendantFocusability="blocksDescendants"
+      android:orientation="vertical">
+
+      <include layout="@layout/home_top_header" />
+
+      <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_launcher" />
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal">
 
-      <TextView
-        android:layout_width="wrap_content"
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/remai" />
+
+        <TextView
+          android:id="@+id/tv_type_title"
+          android:layout_width="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="4dp"
+          android:text="热卖" />
+
+      </LinearLayout>
+
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="热卖" />
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/cardview_light_background"
+        tools:context="android.com.anxintao.home.HomeFragment" />
 
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-      android:id="@+id/rv_list"
-      android:layout_marginTop="25dp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="@color/cardview_light_background"
-      android:layout_marginBottom="25dp"
-      tools:context="android.com.anxintao.home.HomeFragment" />
+  </android.com.anxintao.widget.ScrollviewNestedRecyclerview>
 
-  </LinearLayout>
-
-</android.com.anxintao.widget.ScrollviewNestedRecyclerview>
+  <ImageView
+    android:id="@+id/iv_to_top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginBottom="50dp"
+    android:layout_marginRight="15dp"
+    android:src="@drawable/to_top"/>
+</RelativeLayout>

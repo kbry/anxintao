@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
-  android:layout_height="wrap_content"
+  android:layout_height="49dp">
+
+<LinearLayout
+  android:layout_width="match_parent"
+  android:layout_height="49dp"
   android:gravity="center"
-  android:background="@color/material_blue_grey_800"
+  android:background="@android:color/white"
   android:orientation="horizontal">
+
+
 
   <LinearLayout
     android:layout_width="0dp"
@@ -15,16 +23,18 @@
     android:orientation="vertical">
 
     <ImageButton
-      android:id="@+id/id_tab_weixin_img"
+      android:id="@+id/id_tab1"
       android:clickable="false"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:src="@drawable/ic_launcher"
+      android:src="@drawable/shouye_normal"
       android:background="#00000000"/>
     <TextView
+      android:id="@+id/tv_text1"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:textColor="@android:color/holo_orange_light"
+      android:textColor="#F53C28"
+      android:textSize="11dp"
       android:text="首页"/>
   </LinearLayout>
   <LinearLayout
@@ -36,16 +46,18 @@
     android:orientation="vertical">
 
     <ImageButton
-      android:id="@+id/id_tab_frd_img"
+      android:id="@+id/id_tab2"
       android:clickable="false"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:src="@drawable/ic_launcher"
+      android:src="@drawable/hehuoren_normal"
       android:background="#00000000"/>
     <TextView
+      android:id="@+id/tv_text2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:textColor="@android:color/holo_orange_light"
+      android:textColor="#B7B7B7"
+      android:textSize="11dp"
       android:text="我的店"/>
   </LinearLayout>
   <LinearLayout
@@ -57,16 +69,18 @@
     android:orientation="vertical">
 
     <ImageButton
-      android:id="@+id/id_tab_address_img"
+      android:id="@+id/id_tab3"
       android:clickable="false"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:src="@drawable/ic_launcher"
+      android:src="@drawable/gouwu_normal"
       android:background="#00000000"/>
     <TextView
+      android:id="@+id/tv_text3"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:textColor="@android:color/holo_orange_light"
+      android:textColor="#B7B7B7"
+      android:textSize="11dp"
       android:text="购物车"/>
   </LinearLayout>
   <LinearLayout
@@ -78,17 +92,20 @@
     android:orientation="vertical">
 
     <ImageButton
-      android:id="@+id/id_tab_setting_img"
+      android:id="@+id/id_tab4"
       android:clickable="false"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:src="@drawable/ic_launcher"
+      android:src="@drawable/geren_normal"
       android:background="#00000000"/>
     <TextView
+      android:id="@+id/tv_text4"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:textColor="@android:color/holo_orange_light"
+      android:textColor="#B7B7B7"
+      android:textSize="11dp"
       android:text="个人中心"/>
   </LinearLayout>
 
 </LinearLayout>
+</android.support.v7.widget.CardView>

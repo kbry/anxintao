@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:visibility="gone"
         android:src="@drawable/ic_launcher" />
 
       <TextView
@@ -15,6 +16,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:textColor="#F53C28"
+        android:textSize="16dp"
         android:text="食品" />
 
       <View
@@ -23,6 +26,6 @@
         android:layout_height="4dp"
         android:layout_gravity="center_horizontal"
         android:visibility="gone"
-        android:background="#ff5500" />
+        android:background="#F53C28" />
 
 </LinearLayout>

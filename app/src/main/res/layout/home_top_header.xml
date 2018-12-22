@@ -4,19 +4,124 @@
   android:layout_height="match_parent"
   android:orientation="vertical">
 
-  <com.oragee.banners.BannerView
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="36dp">
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="0.5dp"
+      android:layout_alignParentBottom="true"
+      android:background="#33999999" />
+
+    <HorizontalScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:scrollbars="none">
+
+      <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+          android:id="@+id/rb1"
+          android:checked="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="17dp"
+          android:button="@null"
+          android:drawableBottom="@drawable/top_type_bottom_line_selecter"
+          android:drawablePadding="10dp"
+          android:gravity="center"
+          android:text="爆品"
+          android:textColor="@drawable/top_type_text_color"
+          android:textSize="16dp" />
+
+        <RadioButton
+          android:id="@+id/rb2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="17dp"
+          android:button="@null"
+          android:drawableBottom="@drawable/top_type_bottom_line_selecter"
+          android:drawablePadding="10dp"
+          android:gravity="center"
+          android:text="蔬果生鲜"
+          android:textColor="@drawable/top_type_text_color"
+          android:textSize="16dp" />
+
+        <RadioButton
+          android:id="@+id/rb3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="17dp"
+          android:button="@null"
+          android:drawableBottom="@drawable/top_type_bottom_line_selecter"
+          android:drawablePadding="10dp"
+          android:gravity="center"
+          android:text="食品饮料"
+          android:textColor="@drawable/top_type_text_color"
+          android:textSize="16dp" />
+
+        <RadioButton
+          android:id="@+id/rb4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="17dp"
+          android:button="@null"
+          android:drawableBottom="@drawable/top_type_bottom_line_selecter"
+          android:drawablePadding="10dp"
+          android:gravity="center"
+          android:text="家居生活"
+          android:textColor="@drawable/top_type_text_color"
+          android:textSize="16dp" />
+
+        <RadioButton
+          android:id="@+id/rb5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="17dp"
+          android:button="@null"
+          android:drawableBottom="@drawable/top_type_bottom_line_selecter"
+          android:drawablePadding="10dp"
+          android:gravity="center"
+          android:text="服饰美妆"
+          android:textColor="@drawable/top_type_text_color"
+          android:textSize="16dp" />
+
+        <RadioButton
+          android:id="@+id/rb6"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="17dp"
+          android:layout_marginRight="17dp"
+          android:button="@null"
+          android:drawableBottom="@drawable/top_type_bottom_line_selecter"
+          android:drawablePadding="10dp"
+          android:gravity="center"
+          android:text="母婴优品"
+          android:textColor="@drawable/top_type_text_color"
+          android:textSize="16dp" />
+
+      </RadioGroup>
+      <!--<LinearLayout-->
+      <!--android:id="@+id/ll_radio"-->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--android:orientation="horizontal"-->
+      <!--android:weightSum="7"/>-->
+    </HorizontalScrollView>
+
+  </RelativeLayout>
+
+  <android.com.anxintao.widget.banner.BannerView
     android:id="@+id/bannerview"
     android:layout_width="match_parent"
-    android:layout_height="200dp" />
-
-  <LinearLayout
-    android:id="@+id/ll_radio"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:weightSum="4">
-
-
-  </LinearLayout>
+    android:layout_height="215dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp" />
 
 </LinearLayout>

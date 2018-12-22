@@ -5,6 +5,7 @@ import android.com.anxintao.home.HomeFragment;
 import android.com.anxintao.store.StoreFragment;
 import android.com.anxintao.user.UserFragment;
 import android.com.anxintao.widget.NoScrollViewPager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,10 +34,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
   private LinearLayout mTabSetting;
 
   //四个Tab对应的ImageButton
-  private ImageButton mImgWeixin;
-  private ImageButton mImgFrd;
-  private ImageButton mImgAddress;
-  private ImageButton mImgSetting;
+  private ImageButton mButton1;
+  private ImageButton mButton2;
+  private ImageButton mButton3;
+  private ImageButton mButton4;
+  private TextView mText1,mText2,mText3,mText4;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +86,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
       public void onPageSelected(int position) {
         //设置position对应的集合中的Fragment
         mViewPager.setCurrentItem(position);
-        resetImgs();
         selectTab(position);
       }
 
@@ -111,18 +113,20 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     mTabFrd = (LinearLayout) findViewById(R.id.id_tab_frd);
     mTabAddress = (LinearLayout) findViewById(R.id.id_tab_address);
     mTabSetting = (LinearLayout) findViewById(R.id.id_tab_setting);
-    mImgWeixin = (ImageButton) findViewById(R.id.id_tab_weixin_img);
-    mImgFrd = (ImageButton) findViewById(R.id.id_tab_frd_img);
-    mImgAddress = (ImageButton) findViewById(R.id.id_tab_address_img);
-    mImgSetting = (ImageButton) findViewById(R.id.id_tab_setting_img);
-
+    mButton1 = (ImageButton) findViewById(R.id.id_tab1);
+    mButton2 = (ImageButton) findViewById(R.id.id_tab2);
+    mButton3 = (ImageButton) findViewById(R.id.id_tab3);
+    mButton4 = (ImageButton) findViewById(R.id.id_tab4);
+    mText1 = (TextView) findViewById(R.id.tv_text1);
+    mText2 = (TextView) findViewById(R.id.tv_text2);
+    mText3 = (TextView) findViewById(R.id.tv_text3);
+    mText4 = (TextView) findViewById(R.id.tv_text4);
+    selectTab(0);
   }
 
   @Override
   public void onClick(View v) {
     //先将四个ImageButton置为灰色
-    resetImgs();
-
     //根据点击的Tab切换不同的页面及设置对应的ImageButton为绿色
     switch (v.getId()) {
       case R.id.id_tab_weixin:
@@ -144,27 +148,48 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     //根据点击的Tab设置对应的ImageButton为绿色
     switch (i) {
       case 0:
-        mImgWeixin.setImageResource(R.drawable.ic_launcher_round);
+        mButton1.setImageResource(R.drawable.shouye_pressed);
+        mText1.setTextColor(Color.parseColor("#F53C28"));
+        mButton2.setImageResource(R.drawable.hehuoren_normal);
+        mText2.setTextColor(Color.parseColor("#B7B7B7"));
+        mButton3.setImageResource(R.drawable.gouwu_normal);
+        mText3.setTextColor(Color.parseColor("#B7B7B7"));
+        mButton4.setImageResource(R.drawable.geren_normal);
+        mText4.setTextColor(Color.parseColor("#B7B7B7"));
         break;
       case 1:
-        mImgFrd.setImageResource(R.drawable.ic_launcher_round);
+        mButton1.setImageResource(R.drawable.shouye_normal);
+        mText1.setTextColor(Color.parseColor("#B7B7B7"));
+        mButton2.setImageResource(R.drawable.hehuoren_pressed);
+        mText2.setTextColor(Color.parseColor("#F53C28"));
+        mButton3.setImageResource(R.drawable.gouwu_normal);
+        mText3.setTextColor(Color.parseColor("#B7B7B7"));
+        mButton4.setImageResource(R.drawable.geren_normal);
+        mText4.setTextColor(Color.parseColor("#B7B7B7"));
         break;
       case 2:
-        mImgAddress.setImageResource(R.drawable.ic_launcher_round);
+        mButton1.setImageResource(R.drawable.shouye_normal);
+        mText1.setTextColor(Color.parseColor("#B7B7B7"));
+        mButton2.setImageResource(R.drawable.hehuoren_normal);
+        mText2.setTextColor(Color.parseColor("#B7B7B7"));
+        mButton3.setImageResource(R.drawable.gouwu_pressed);
+        mText3.setTextColor(Color.parseColor("#F53C28"));
+        mButton4.setImageResource(R.drawable.geren_normal);
+        mText4.setTextColor(Color.parseColor("#B7B7B7"));
         break;
       case 3:
-        mImgSetting.setImageResource(R.drawable.ic_launcher_round);
+        mButton1.setImageResource(R.drawable.shouye_normal);
+        mText1.setTextColor(Color.parseColor("#B7B7B7"));
+        mButton2.setImageResource(R.drawable.hehuoren_normal);
+        mText2.setTextColor(Color.parseColor("#B7B7B7"));
+        mButton3.setImageResource(R.drawable.gouwu_normal);
+        mText3.setTextColor(Color.parseColor("#B7B7B7"));
+        mButton4.setImageResource(R.drawable.geren_pressed);
+        mText4.setTextColor(Color.parseColor("#F53C28"));
         break;
     }
     //设置当前点击的Tab所对应的页面
     mViewPager.setCurrentItem(i);
   }
 
-  //将四个ImageButton设置为灰色
-  private void resetImgs() {
-    mImgWeixin.setImageResource(R.drawable.ic_launcher_round);
-    mImgFrd.setImageResource(R.drawable.ic_launcher_round);
-    mImgAddress.setImageResource(R.drawable.ic_launcher_round);
-    mImgSetting.setImageResource(R.drawable.ic_launcher_round);
-  }
 }
