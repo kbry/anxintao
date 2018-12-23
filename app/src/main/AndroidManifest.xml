@@ -22,7 +22,8 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".goodDetail.GoodDetailActivity"></activity>
+    <activity android:name=".goodDetail.GoodDetailActivity" />
+    <activity android:name=".store.DataActivity"></activity>
   </application>
 
 </manifest>

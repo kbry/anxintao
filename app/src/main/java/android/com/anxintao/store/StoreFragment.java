@@ -31,8 +31,16 @@ public class StoreFragment extends Fragment {
   @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     rootView = inflater.inflate(R.layout.fragment_store, container, false);
     initList();
+    rootView.findViewById(R.id.ll_data_ana).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        Intent intent = new Intent(StoreFragment.this.getContext(),DataActivity.class);
+        startActivity(intent);
+      }
+    });
     return rootView;
   }
+
+
 
   private void initList(){
     mList = rootView.findViewById(R.id.rv_list);
