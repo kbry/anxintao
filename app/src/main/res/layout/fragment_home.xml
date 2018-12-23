@@ -71,7 +71,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
-        android:background="@color/cardview_light_background"
         tools:context="android.com.anxintao.home.HomeFragment" />
 
     </LinearLayout>
