@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="55dp">
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:orientation="vertical">
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="安陶保湿面膜"
+    android:textColor="#FF333333"
+    android:textSize="14dp" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:text="2018-08-09 22:47:43"
+    android:textColor="#FF666666"
+    android:textSize="11dp" />
+
+  </LinearLayout>
+
+
+  <TextView
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="+3.99"
+    android:textColor="#FF666666"
+    android:textSize="14dp" />
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#FFF1F1F1"
+    />
+
+
+</RelativeLayout>

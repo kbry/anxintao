@@ -23,7 +23,8 @@
       </intent-filter>
     </activity>
     <activity android:name=".goodDetail.GoodDetailActivity" />
-    <activity android:name=".store.DataActivity"></activity>
+    <activity android:name=".store.DataActivity" />
+    <activity android:name=".store.SSSYActivity"></activity>
   </application>
 
 </manifest>

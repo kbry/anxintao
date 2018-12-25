@@ -37,6 +37,12 @@ public class StoreFragment extends Fragment {
         startActivity(intent);
       }
     });
+    rootView.findViewById(R.id.ll_sssy).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        Intent intent = new Intent(StoreFragment.this.getContext(),SSSYActivity.class);
+        startActivity(intent);
+      }
+    });
     return rootView;
   }
 
