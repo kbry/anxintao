@@ -238,6 +238,7 @@
       </LinearLayout>
 
       <LinearLayout
+        android:id="@+id/ll_wdkh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -266,6 +267,7 @@
       android:background="#FFF4F4F4" />
 
     <RelativeLayout
+      android:id="@+id/rl_customer_order"
       tools:visibility="gone"
       android:layout_width="match_parent"
       android:layout_height="37dp"

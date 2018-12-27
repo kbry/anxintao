@@ -43,6 +43,19 @@ public class StoreFragment extends Fragment {
         startActivity(intent);
       }
     });
+    rootView.findViewById(R.id.ll_wdkh).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        Intent intent = new Intent(StoreFragment.this.getContext(),MyCustomerActivity.class);
+        startActivity(intent);
+      }
+    });
+    rootView.findViewById(R.id.rl_customer_order).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        Intent intent = new Intent(StoreFragment.this.getContext(),CustomerOrderActivity.class);
+        startActivity(intent);
+      }
+    });
+
     return rootView;
   }
 
