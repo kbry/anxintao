@@ -42,7 +42,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>{
 
   @Override
   public void onBindViewHolder(CartAdapter.ViewHolder holder, int position) {
-    holder.mText.setText(list.get(position));
+    //holder.mText.setText(list.get(position));
     holder.mItemView.setTag(position);
   }
 
@@ -57,7 +57,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>{
     ViewHolder(View itemView) {
       super(itemView);
       mItemView = itemView;
-      mText = itemView.findViewById(R.id.tv_type);
+      //mText = itemView.findViewById(R.id.tv_type);
     }
   }
 

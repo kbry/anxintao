@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
-  android:layout_height="60dp"
+  android:background="@android:color/white"
+  android:layout_height="50dp" >
+
+<LinearLayout
+  android:layout_width="match_parent"
+  android:layout_height="50dp"
   android:background="@android:color/white"
   android:orientation="horizontal">
 
@@ -11,33 +17,33 @@
   android:orientation="horizontal">
 
   <ImageView
-    android:layout_width="60dp"
+    android:layout_width="50dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
-    android:src="@android:drawable/ic_menu_share"/>
+    android:src="@drawable/kefu"/>
 
   <View
-    android:layout_width="1dp"
-    android:background="@android:color/darker_gray"
+    android:layout_width="0.5dp"
+    android:background="#33999999"
     android:layout_height="60dp"/>
 
 
   <ImageView
-    android:layout_width="60dp"
+    android:layout_width="50dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
-    android:src="@android:drawable/ic_menu_share"/>
+    android:src="@drawable/shouchang"/>
 
   <View
-    android:layout_width="1dp"
-    android:background="@android:color/darker_gray"
+    android:layout_width="0.5dp"
+    android:background="#33999999"
     android:layout_height="match_parent"/>
 
   <ImageView
-    android:layout_width="60dp"
+    android:layout_width="50dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
-    android:src="@android:drawable/ic_menu_share"/>
+    android:src="@drawable/gouwuche"/>
 
   </LinearLayout>
 
@@ -53,17 +59,22 @@
       android:layout_weight="1"
       android:text="加入购物车"
       android:gravity="center"
+      android:textColor="#FFF53C28"
+      android:textSize="14dp"
       android:layout_height="match_parent"
-      android:background="@android:color/holo_blue_bright"/>
+      android:background="#FFEBE0"/>
 
     <TextView
       android:layout_width="0dp"
       android:layout_weight="1"
       android:text="立即购买"
       android:gravity="center"
+      android:textColor="#FFFFFFFF"
+      android:textSize="14dp"
       android:layout_height="match_parent"
-      android:background="@android:color/holo_red_dark"/>
+      android:background="#FFF53C28"/>
 
     </LinearLayout>
 
 </LinearLayout>
+</android.support.v7.widget.CardView>

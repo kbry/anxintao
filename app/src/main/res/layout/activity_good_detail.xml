@@ -166,12 +166,13 @@
 
 
       <RelativeLayout
-        tools:visibility="gone"
+        tools:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginTop="6dp"
-        android:background="@drawable/good_detail_rectangle">
+        android:background="@drawable/good_detail_bg">
 
         <ImageView
           android:id="@+id/icon_store"
@@ -229,7 +230,6 @@
       </RelativeLayout>
 
       <RelativeLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -571,6 +571,6 @@
   <include
     layout="@layout/buy_bottom_bar"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="50dp"
     android:layout_alignParentBottom="true" />
 </RelativeLayout>

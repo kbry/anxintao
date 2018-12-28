@@ -4,7 +4,6 @@ import android.com.anxintao.R;
 import android.com.anxintao.goodDetail.GoodDetailActivity;
 import android.com.anxintao.tools.ToastUtil;
 import android.com.anxintao.widget.OnItemClickListener;
-import android.com.anxintao.widget.RecycleViewDivider;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -71,7 +70,7 @@ public class CartFragment extends Fragment {
     layout.setSmoothScrollbarEnabled(true);
     layout.setAutoMeasureEnabled(true);
     mList.setLayoutManager(layout);
-    mList.addItemDecoration(new RecycleViewDivider(CartFragment.this.getContext(),LinearLayoutManager.HORIZONTAL,1,getResources().getColor(android.R.color.transparent)));
+    //mList.addItemDecoration(new RecycleViewDivider(CartFragment.this.getContext(),LinearLayoutManager.HORIZONTAL,1,getResources().getColor(android.R.color.transparent)));
     List<String> test = new ArrayList<>();
     for (int i = 0; i < 10; i++) {
       test.add(i+"test");
