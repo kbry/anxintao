@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/white">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+      android:id="@+id/rl_top"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_user_rights"
+      tools:visibility="gone">
+
+      <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11.5dp"
+        android:layout_marginTop="5.5dp"
+        android:src="@drawable/user_right_back_arrow" />
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_dzkp">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="真选店主"
+            android:textColor="#FF5A4215"
+            android:textSize="28dp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购买省钱  分享赚钱"
+            android:textColor="#FF5A4215"
+            android:textSize="13dp" />
+        </LinearLayout>
+
+      </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:id="@+id/rl_card"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rl_top"
+      android:layout_marginTop="-50dp"
+      android:background="@drawable/user_rights_bottom_rectangle"
+      tools:visibility="gone">
+
+      <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="店主尊享两大权益"
+        android:textColor="#FF5A4215"
+        android:textSize="17dp" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1">
+
+          <android.support.v7.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/white"
+            app:cardCornerRadius="6dp">
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:orientation="vertical">
+
+              <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_zmsq" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="购买省钱"
+                android:textColor="#FF5A4215"
+                android:textSize="13dp" />
+            </LinearLayout>
+
+
+          </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1">
+
+          <android.support.v7.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/white"
+            app:cardCornerRadius="6dp">
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:orientation="vertical">
+
+              <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_fxzq" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="分享赚钱"
+                android:textColor="#FF5A4215"
+                android:textSize="13dp" />
+            </LinearLayout>
+
+
+          </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1">
+
+          <android.support.v7.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/white"
+            app:cardCornerRadius="6dp">
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:orientation="vertical">
+
+              <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_jqqd" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="敬请期待"
+                android:textColor="#FF5A4215"
+                android:textSize="13dp" />
+            </LinearLayout>
+
+
+          </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+      </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rl_card"
+      android:layout_marginTop="25dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="权益一：购买省钱"
+        android:textColor="#FF5A4215"
+        tools:visibility="gone"
+        android:textSize="17dp" />
+
+      <RelativeLayout
+        tools:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_user_rights_vs">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="53dp"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通用户"
+            android:textColor="#FFFBE2A6"
+            android:textSize="16dp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/normal_price_bg"
+            android:gravity="center"
+            android:text="大众价"
+            android:textColor="#FF666666"
+            android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="53dp"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="真选店主"
+            android:textColor="#FF5B544E"
+            android:textSize="16dp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/member_price_bg"
+            android:gravity="center"
+            android:text="会员价"
+            android:textColor="#FFF0D28D"
+            android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:src="@drawable/icon_vs" />
+
+      </RelativeLayout>
+
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:text="权益二：分享赚钱"
+        android:textColor="#FF5A4215"
+        android:textSize="17dp" />
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_user_rights_vs">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="53dp"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通用户"
+            android:textColor="#FFFBE2A6"
+            android:textSize="16dp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/normal_price_bg"
+            android:gravity="center"
+            android:text="无佣金"
+            android:textColor="#FF666666"
+            android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="53dp"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="真选店主"
+            android:textColor="#FF5B544E"
+            android:textSize="16dp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/member_price_bg"
+            android:gravity="center"
+            android:text="有佣金"
+            android:textColor="#FFF0D28D"
+            android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:src="@drawable/icon_vs" />
+
+      </RelativeLayout>
+
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:text="如何成为店主？"
+        android:textColor="#FF5A4215"
+        android:textSize="17dp" />
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_gwcwdz">
+
+        <ImageView
+          android:id="@+id/iv_fz"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="48dp"
+          android:src="@drawable/icon_fz" />
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="43dp"
+          android:layout_toRightOf="@+id/iv_fz"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购物成为店主"
+            android:textColor="#FFF0D28D"
+            android:textSize="16dp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购买指定商品即可成为店主"
+            android:textColor="#FFF0D28D"
+            android:textSize="12dp" />
+
+        </LinearLayout>
+      </RelativeLayout>
+
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:text="权益说明"
+        android:textColor="#FF5A4215"
+        android:textSize="17dp" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/user_rights_intro_rectangle"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="25dp"
+        android:paddingTop="15dp">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1. 分享商品给好友，好友通过推荐人购买后，推荐人获得佣金（大众价格-会员价格=商品佣金）"
+          android:textColor="#FF5A4215"
+          android:textSize="13dp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="3dp"
+          android:text="2. 真选店主价格可与优惠券叠加使用"
+          android:textColor="#FF5A4215"
+          android:textSize="13dp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="3dp"
+          android:text="3. 真选店主在开通后不可退"
+          android:textColor="#FF5A4215"
+          android:textSize="13dp" />
+
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="成为店主"
+        android:background="@drawable/bg_cwdz"
+        android:textColor="#FFF3D795"
+        android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+
+  </RelativeLayout>
+</ScrollView>

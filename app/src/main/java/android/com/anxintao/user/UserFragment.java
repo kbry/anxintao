@@ -1,6 +1,7 @@
 package android.com.anxintao.user;
 
 import android.com.anxintao.R;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,7 +15,16 @@ public class UserFragment extends Fragment {
   }
 
   @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.fragment_user, container, false);
+     View rootView = inflater.inflate(R.layout.fragment_user, container, false);
+    rootView.findViewById(R.id.rl_user_rights).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        Intent intent = new Intent(UserFragment.this.getActivity(),UserRightsIntroActivity.class);
+        startActivity(intent);
+      }
+    });
+    return rootView;
+
+
   }
 
 }
