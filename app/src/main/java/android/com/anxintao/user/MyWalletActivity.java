@@ -20,7 +20,7 @@ public class MyWalletActivity extends FragmentActivity {
     initListView();
     findViewById(R.id.tv_problem).setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
-        Intent intent = new Intent(MyWalletActivity.this,LeftMoneyActivity.class);
+        Intent intent = new Intent(MyWalletActivity.this,ProblemLeftMoneyActivity.class);
         startActivity(intent);
       }
     });

@@ -27,7 +27,7 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="34dp"
     android:layout_marginTop="34dp"
-    android:text="验证手机号"
+    android:text="验证银行卡号"
     android:textColor="#FF333333"
     android:textSize="32sp" />
 
@@ -36,73 +36,55 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="34dp"
     android:layout_marginTop="2dp"
-    android:text="为保证账户安全，请绑定本人手机号"
+    android:text="为保证账户安全，请绑定本人银行卡号"
     android:textColor="#FF999999"
     android:textSize="14sp" />
 
   <EditText
     android:id="@+id/et_phone"
-    android:background="@null"
-    android:layout_marginLeft="35dp"
-    android:layout_marginTop="65dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:hint="11位手机号码" />
+    android:layout_marginLeft="35dp"
+    android:layout_marginTop="65dp"
+    android:background="@null"
+    android:hint="持卡人姓名" />
 
   <View
     android:layout_width="match_parent"
+    android:layout_height="1dp"
     android:layout_marginLeft="35dp"
     android:layout_marginRight="35dp"
     android:layout_marginTop="12dp"
-    android:layout_height="1dp"
     android:background="#33999999" />
 
-  <RelativeLayout
-    android:layout_marginTop="22dp"
+
+  <EditText
+    android:id="@+id/et_verify_code"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
     android:layout_marginLeft="35dp"
-    android:layout_marginRight="35dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_marginTop="30dp"
+    android:hint="卡号" />
 
-    <EditText
-      android:id="@+id/et_verify_code"
-      android:background="@null"
-      android:layout_centerVertical="true"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:hint="四位" />
-
-
-    <TextView
-      android:layout_width="105dp"
-      android:layout_height="35dp"
-      android:layout_alignParentRight="true"
-      android:text="获取验证码"
-      android:gravity="center"
-      android:background="@drawable/bg_red_verify_code"
-      android:textColor="#FFF53C28"
-      android:textSize="14dp" />
-
-  </RelativeLayout>
 
   <View
     android:layout_width="match_parent"
+    android:layout_height="1dp"
     android:layout_marginLeft="35dp"
     android:layout_marginRight="35dp"
-    android:layout_marginTop="5dp"
-    android:layout_height="1dp"
+    android:layout_marginTop="12dp"
     android:background="#33999999" />
 
   <TextView
-    android:id="@+id/tv_next"
     android:layout_width="305dp"
     android:layout_height="45dp"
-    android:layout_marginTop="60dp"
-    android:gravity="center"
     android:layout_gravity="center_horizontal"
-    android:text="下一步"
-    android:textColor="#FFFFFFFF"
+    android:layout_marginTop="60dp"
     android:background="@drawable/verify_code_next"
+    android:gravity="center"
+    android:text="完成"
+    android:textColor="#FFFFFFFF"
     android:textSize="14dp" />
 
 

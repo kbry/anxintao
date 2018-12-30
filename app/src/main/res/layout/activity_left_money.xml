@@ -6,7 +6,7 @@
   android:layout_height="match_parent"
   android:orientation="vertical"
   android:background="@android:color/white"
-  tools:context="android.com.anxintao.user.LeftMoneyActivity">
+  tools:context="android.com.anxintao.user.ProblemLeftMoneyActivity">
 
   <RelativeLayout
     android:layout_width="match_parent"
