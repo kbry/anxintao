@@ -22,6 +22,14 @@ public class UserFragment extends Fragment {
         startActivity(intent);
       }
     });
+
+    rootView.findViewById(R.id.my_wallet).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        Intent intent = new Intent(UserFragment.this.getActivity(),MyWalletActivity.class);
+        startActivity(intent);
+      }
+    });
+
     return rootView;
 
 

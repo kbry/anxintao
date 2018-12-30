@@ -271,6 +271,7 @@
     android:weightSum="3">
 
     <LinearLayout
+      android:id="@+id/my_wallet"
       android:layout_width="wrap_content"
       android:layout_height="84dp"
       android:layout_weight="1"

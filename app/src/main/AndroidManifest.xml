@@ -27,7 +27,8 @@
     <activity android:name=".store.SSSYActivity" />
     <activity android:name=".store.MyCustomerActivity" />
     <activity android:name=".store.CustomerOrderActivity" />
-    <activity android:name=".user.UserRightsIntroActivity"></activity>
+    <activity android:name=".user.UserRightsIntroActivity" />
+    <activity android:name=".user.MyWalletActivity"></activity>
   </application>
 
 </manifest>
