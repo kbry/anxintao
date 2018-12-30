@@ -18,9 +18,9 @@ public class GetMoneyActivity extends FragmentActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_get_money);
     initListView();
-    findViewById(R.id.tv_problem).setOnClickListener(new View.OnClickListener() {
+    findViewById(R.id.tv_go_get_money).setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
-        Intent intent = new Intent(GetMoneyActivity.this,LeftMoneyActivity.class);
+        Intent intent = new Intent(GetMoneyActivity.this,VerifyPhoneActivity.class);
         startActivity(intent);
       }
     });
