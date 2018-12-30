@@ -28,7 +28,9 @@
     <activity android:name=".store.MyCustomerActivity" />
     <activity android:name=".store.CustomerOrderActivity" />
     <activity android:name=".user.UserRightsIntroActivity" />
-    <activity android:name=".user.MyWalletActivity"></activity>
+    <activity android:name=".user.MyWalletActivity" />
+    <activity android:name=".user.LeftMoneyActivity"/>
+    <activity android:name=".user.GetMoneyActivity"/>
   </application>
 
 </manifest>

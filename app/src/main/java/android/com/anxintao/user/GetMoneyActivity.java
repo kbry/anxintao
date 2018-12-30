@@ -12,25 +12,18 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyWalletActivity extends FragmentActivity {
+public class GetMoneyActivity extends FragmentActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_my_wallet);
+    setContentView(R.layout.activity_get_money);
     initListView();
     findViewById(R.id.tv_problem).setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
-        Intent intent = new Intent(MyWalletActivity.this,LeftMoneyActivity.class);
+        Intent intent = new Intent(GetMoneyActivity.this,LeftMoneyActivity.class);
         startActivity(intent);
       }
     });
-    findViewById(R.id.tv_go_get_money).setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View v) {
-        Intent intent = new Intent(MyWalletActivity.this,GetMoneyActivity.class);
-        startActivity(intent);
-      }
-    });
-
   }
 
   private RecyclerView listview;
@@ -48,7 +41,7 @@ public class MyWalletActivity extends FragmentActivity {
     for (int i = 0; i < 10; i++) {
       test.add(i+"test");
     }
-    MyWalletTradeDetailAdapter adapter = new MyWalletTradeDetailAdapter(test);
+    MyWalletGetMoneyRecordListItemAdapter adapter = new MyWalletGetMoneyRecordListItemAdapter(test);
     adapter.setOnViewItemClickListener(new OnItemClickListener() {
       @Override public void onItemClick(View view, int position) {
         ToastUtil.toast("---"+position);
